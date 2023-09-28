@@ -24,6 +24,9 @@ jobs:
     needs:
       - pre-commit
       - integration
+    permissions:
+      contents: write
+      pull-requests: write
     if: github.ref == 'refs/heads/main'
     steps:
       - name: releasing
